@@ -25,7 +25,10 @@ class RmadminMenuController extends Controller
             }
         }
 
+        $user = session('user');
+
         $menus = DB::table('menus')
+                        ->where('user_id',$user['id'])
                         ->select('*')
                         ->get();
         return view('rmadmin.menu', compact('menus'));

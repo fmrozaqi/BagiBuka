@@ -131,7 +131,7 @@ Route::get('/set/{id}', [CookiesController::class, 'set']);
 Route::get('/get', [CookiesController::class, 'get']);
 Route::get('/delete', [CookiesController::class, 'delete']);
 
-Route::get('/buatuser', function(){
+Route::get('/buatadmin', function(){
     $user = User::create([
         'username' => 'admin',
         'password' => Hash::make('admin'),
